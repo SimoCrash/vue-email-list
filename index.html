@@ -16,10 +16,10 @@
 </head>
 <body>
     <div id="root">
-        <button @click="getOneMail">click per 1 email</button>
+        <!-- <button @click="getOneMail">click per 1 email</button> -->
         <button @click="getTenMails">click per 10 email</button>
-        <ul v-for="getEmail in emails">
-            <li>{{ getEmail }}</li>
+        <ul>
+            <li v-for="(getEmail) in emails" v-if="emails.length == 10">{{ getEmail }}</li>
         </ul>
     </div>
 </body>
